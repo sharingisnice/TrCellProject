@@ -14,6 +14,8 @@
 		E2AAA70E2646C5C5000CD938 /* TrCellProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E2AAA70C2646C5C5000CD938 /* TrCellProject.xcdatamodeld */; };
 		E2AAA7102646C5C6000CD938 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2AAA70F2646C5C6000CD938 /* Assets.xcassets */; };
 		E2AAA7132646C5C6000CD938 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2AAA7112646C5C6000CD938 /* LaunchScreen.storyboard */; };
+		E2F49F6E26480F2F0014AAB0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F49F6D26480F2F0014AAB0 /* DetailViewController.swift */; };
+		E2F49F70264819680014AAB0 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F49F6F264819680014AAB0 /* Movie.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		E2AAA70F2646C5C6000CD938 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E2AAA7122646C5C6000CD938 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E2AAA7142646C5C6000CD938 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2F49F6D26480F2F0014AAB0 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		E2F49F6F264819680014AAB0 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +62,11 @@
 		E2AAA7022646C5C5000CD938 /* TrCellProject */ = {
 			isa = PBXGroup;
 			children = (
+				E2F49F6C26480F180014AAB0 /* ViewModels */,
+				E2F49F6B26480F100014AAB0 /* Controllers */,
+				E2F49F6A26480F090014AAB0 /* Models */,
 				E2AAA7032646C5C5000CD938 /* AppDelegate.swift */,
 				E2AAA7052646C5C5000CD938 /* SceneDelegate.swift */,
-				E2AAA7072646C5C5000CD938 /* ViewController.swift */,
 				E2AAA7092646C5C5000CD938 /* Main.storyboard */,
 				E2AAA70F2646C5C6000CD938 /* Assets.xcassets */,
 				E2AAA7112646C5C6000CD938 /* LaunchScreen.storyboard */,
@@ -68,6 +74,30 @@
 				E2AAA70C2646C5C5000CD938 /* TrCellProject.xcdatamodeld */,
 			);
 			path = TrCellProject;
+			sourceTree = "<group>";
+		};
+		E2F49F6A26480F090014AAB0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E2F49F6F264819680014AAB0 /* Movie.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E2F49F6B26480F100014AAB0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E2F49F6D26480F2F0014AAB0 /* DetailViewController.swift */,
+				E2AAA7072646C5C5000CD938 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E2F49F6C26480F180014AAB0 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,6 +172,8 @@
 			files = (
 				E2AAA7082646C5C5000CD938 /* ViewController.swift in Sources */,
 				E2AAA7042646C5C5000CD938 /* AppDelegate.swift in Sources */,
+				E2F49F70264819680014AAB0 /* Movie.swift in Sources */,
+				E2F49F6E26480F2F0014AAB0 /* DetailViewController.swift in Sources */,
 				E2AAA7062646C5C5000CD938 /* SceneDelegate.swift in Sources */,
 				E2AAA70E2646C5C5000CD938 /* TrCellProject.xcdatamodeld in Sources */,
 			);
