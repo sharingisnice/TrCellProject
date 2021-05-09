@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		56B1A51045A1CFEEB6973417 /* Pods_TrCellProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8310EFB91B6F057882577229 /* Pods_TrCellProject.framework */; };
 		E2AAA7042646C5C5000CD938 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AAA7032646C5C5000CD938 /* AppDelegate.swift */; };
 		E2AAA7062646C5C5000CD938 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AAA7052646C5C5000CD938 /* SceneDelegate.swift */; };
 		E2AAA7082646C5C5000CD938 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AAA7072646C5C5000CD938 /* ViewController.swift */; };
@@ -20,9 +21,13 @@
 		E2F49F7626481D2C0014AAB0 /* Just.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F49F7526481D2C0014AAB0 /* Just.swift */; };
 		E2F49F7826481F220014AAB0 /* MovieListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F49F7726481F220014AAB0 /* MovieListViewModel.swift */; };
 		E2F49F7B264822BC0014AAB0 /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F49F7A264822BC0014AAB0 /* MovieCollectionViewCell.swift */; };
+		E2F49F7D2648468D0014AAB0 /* MovieResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F49F7C2648468D0014AAB0 /* MovieResultModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		71E593F7E80E4B3B352B29DB /* Pods-TrCellProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrCellProject.release.xcconfig"; path = "Target Support Files/Pods-TrCellProject/Pods-TrCellProject.release.xcconfig"; sourceTree = "<group>"; };
+		8310EFB91B6F057882577229 /* Pods_TrCellProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrCellProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		83CB4E1BE090E95925E663FD /* Pods-TrCellProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrCellProject.debug.xcconfig"; path = "Target Support Files/Pods-TrCellProject/Pods-TrCellProject.debug.xcconfig"; sourceTree = "<group>"; };
 		E2AAA7002646C5C5000CD938 /* TrCellProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrCellProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2AAA7032646C5C5000CD938 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2AAA7052646C5C5000CD938 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +43,7 @@
 		E2F49F7526481D2C0014AAB0 /* Just.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Just.swift; sourceTree = "<group>"; };
 		E2F49F7726481F220014AAB0 /* MovieListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewModel.swift; sourceTree = "<group>"; };
 		E2F49F7A264822BC0014AAB0 /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
+		E2F49F7C2648468D0014AAB0 /* MovieResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResultModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,17 +51,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56B1A51045A1CFEEB6973417 /* Pods_TrCellProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2598C12CDB42FC8F7E5D5990 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8310EFB91B6F057882577229 /* Pods_TrCellProject.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D515EE513A6E5BA8D11C605C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				83CB4E1BE090E95925E663FD /* Pods-TrCellProject.debug.xcconfig */,
+				71E593F7E80E4B3B352B29DB /* Pods-TrCellProject.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E2AAA6F72646C5C5000CD938 = {
 			isa = PBXGroup;
 			children = (
 				E2AAA7022646C5C5000CD938 /* TrCellProject */,
 				E2AAA7012646C5C5000CD938 /* Products */,
+				D515EE513A6E5BA8D11C605C /* Pods */,
+				2598C12CDB42FC8F7E5D5990 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				E2F49F6F264819680014AAB0 /* Movie.swift */,
+				E2F49F7C2648468D0014AAB0 /* MovieResultModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -143,9 +170,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E2AAA7172646C5C6000CD938 /* Build configuration list for PBXNativeTarget "TrCellProject" */;
 			buildPhases = (
+				03BD0905433F5038B281C361 /* [CP] Check Pods Manifest.lock */,
 				E2AAA6FC2646C5C5000CD938 /* Sources */,
 				E2AAA6FD2646C5C5000CD938 /* Frameworks */,
 				E2AAA6FE2646C5C5000CD938 /* Resources */,
+				DBE7BBCDFAC7DA0A3A050A37 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -201,6 +230,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		03BD0905433F5038B281C361 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TrCellProject-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DBE7BBCDFAC7DA0A3A050A37 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TrCellProject/Pods-TrCellProject-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TrCellProject/Pods-TrCellProject-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TrCellProject/Pods-TrCellProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E2AAA6FC2646C5C5000CD938 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -212,6 +283,7 @@
 				E2F49F7626481D2C0014AAB0 /* Just.swift in Sources */,
 				E2F49F6E26480F2F0014AAB0 /* DetailViewController.swift in Sources */,
 				E2AAA7062646C5C5000CD938 /* SceneDelegate.swift in Sources */,
+				E2F49F7D2648468D0014AAB0 /* MovieResultModel.swift in Sources */,
 				E2AAA70E2646C5C5000CD938 /* TrCellProject.xcdatamodeld in Sources */,
 				E2F49F7B264822BC0014AAB0 /* MovieCollectionViewCell.swift in Sources */,
 				E2F49F7326481CA10014AAB0 /* NetworkRequester.swift in Sources */,
@@ -359,6 +431,7 @@
 		};
 		E2AAA7182646C5C6000CD938 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83CB4E1BE090E95925E663FD /* Pods-TrCellProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -378,6 +451,7 @@
 		};
 		E2AAA7192646C5C6000CD938 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71E593F7E80E4B3B352B29DB /* Pods-TrCellProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

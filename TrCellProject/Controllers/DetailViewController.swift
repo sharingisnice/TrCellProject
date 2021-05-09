@@ -27,11 +27,14 @@ class DetailViewController: UIViewController {
     
     func setupUI() {
         if let movie = movie {
+            let imageUrl = "https://image.tmdb.org/t/p/w500\(movie.imageURL ?? "")"
+
             movieScore.text = "⭐ \(movie.score)"
             movieName.text = movie.name
             movieDate.text = "\(movie.date) 📅"
             movieDescription.text = movie.description
-            movieImage.image = UIImage(data: movie.image)
+            movieImage.sd_setImage(with: URL(string: imageUrl), completed: nil)
+            movieImage.contentMode = .scaleAspectFill
         }
     }
 
