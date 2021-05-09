@@ -24,9 +24,13 @@ class MovieListViewModel {
 
     let requester = NetworkRequester()
     
+    private var popularPageCount = 0
+    private var topRatedPageCount = 0
+    private var onTheaterPageCount = 0
     
-    func getPopulerMovies(page: Int) {
-        requester.getMovies(movieType: .popular, page: page) { movieList in
+    func getPopulerMovies() {
+        popularPageCount += 1
+        requester.getMovies(movieType: .popular, page: popularPageCount) { movieList in
             let newItems = try! movieList.get()
             self.popularMovies.append(contentsOf: newItems)
             self.delegate?.updatePopularMovies(movies: self.popularMovies)
@@ -34,16 +38,18 @@ class MovieListViewModel {
         
     }
     
-    func getTopRatedMovies(page: Int) {
-        requester.getMovies(movieType: .topRated, page: page) { movieList in
+    func getTopRatedMovies() {
+        topRatedPageCount += 1
+        requester.getMovies(movieType: .topRated, page: topRatedPageCount) { movieList in
             let newItems = try! movieList.get()
             self.topRatedMovies.append(contentsOf: newItems)
             self.delegate?.updateTopRatedMovies(movies: self.topRatedMovies)
         }
     }
     
-    func getOnTheaterMovies(page: Int) {
-        requester.getMovies(movieType: .onTheaters, page: page) { movieList in
+    func getOnTheaterMovies() {
+        onTheaterPageCount += 1
+        requester.getMovies(movieType: .onTheaters, page: onTheaterPageCount) { movieList in
             let newItems = try! movieList.get()
             self.onTheaterMovies.append(contentsOf: newItems)
             self.delegate?.updateOnTheaterMovies(movies: self.onTheaterMovies)

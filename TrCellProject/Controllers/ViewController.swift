@@ -35,9 +35,9 @@ class ViewController: UIViewController {
         
         
         viewModel.delegate = self
-        viewModel.getPopulerMovies(page: 1)
-        viewModel.getTopRatedMovies(page:1)
-        viewModel.getOnTheaterMovies(page:1)
+        viewModel.getPopulerMovies()
+        viewModel.getTopRatedMovies()
+        viewModel.getOnTheaterMovies()
     }
     
     
@@ -53,7 +53,6 @@ class ViewController: UIViewController {
         if segue.identifier == "detailSegue" {
             let destination = segue.destination as! DetailViewController
             let movie = viewModel.selectedMovie
-            //            let movie = Movie(name: "", score: 0, date: "", description: "", image: Data(), imageURL: "", id: 0)
             destination.movie = movie
         }
     }
@@ -107,14 +106,27 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
         if collectionView == popularCollection {
             movieData = viewModel.popularMovies[indexPath.row]
             cell = popularCollection.dequeueReusableCell(withReuseIdentifier: "MovieCollectionViewCell", for: indexPath) as! MovieCollectionViewCell
+            
+            if indexPath.row == (viewModel.popularMovies.count - 1) {
+                viewModel.getPopulerMovies()
+            }
+
         }
         else if collectionView == topRatedCollection {
             movieData = viewModel.topRatedMovies[indexPath.row]
             cell = topRatedCollection.dequeueReusableCell(withReuseIdentifier: "MovieCollectionViewCell", for: indexPath) as! MovieCollectionViewCell
+            
+            if indexPath.row == (viewModel.topRatedMovies.count - 1) {
+                viewModel.getTopRatedMovies()
+            }
         }
         else if collectionView == onTheaterCollection {
             movieData = viewModel.onTheaterMovies[indexPath.row]
             cell = onTheaterCollection.dequeueReusableCell(withReuseIdentifier: "MovieCollectionViewCell", for: indexPath) as! MovieCollectionViewCell
+            
+            if indexPath.row == (viewModel.onTheaterMovies.count - 1) {
+                viewModel.getOnTheaterMovies()
+            }
         }
         
         cell.movie = movieData
@@ -139,6 +151,10 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
         }
         
         performSegue(withIdentifier: "detailSegue", sender: nil)
+    }
+    
+    func scrollViewDidScrollToTop(_ scrollView: UIScrollView) {
+        print("did scroll to top: \(scrollView)")
     }
     
 }
