@@ -13,4 +13,5 @@ struct Movie {
     let date: String
     let description: String
     let image: Data
+    let id: Int? = nil
 }

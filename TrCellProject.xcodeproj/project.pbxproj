@@ -16,6 +16,10 @@
 		E2AAA7132646C5C6000CD938 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2AAA7112646C5C6000CD938 /* LaunchScreen.storyboard */; };
 		E2F49F6E26480F2F0014AAB0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F49F6D26480F2F0014AAB0 /* DetailViewController.swift */; };
 		E2F49F70264819680014AAB0 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F49F6F264819680014AAB0 /* Movie.swift */; };
+		E2F49F7326481CA10014AAB0 /* NetworkRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F49F7226481CA10014AAB0 /* NetworkRequester.swift */; };
+		E2F49F7626481D2C0014AAB0 /* Just.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F49F7526481D2C0014AAB0 /* Just.swift */; };
+		E2F49F7826481F220014AAB0 /* MovieListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F49F7726481F220014AAB0 /* MovieListViewModel.swift */; };
+		E2F49F7B264822BC0014AAB0 /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F49F7A264822BC0014AAB0 /* MovieCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		E2AAA7142646C5C6000CD938 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2F49F6D26480F2F0014AAB0 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		E2F49F6F264819680014AAB0 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		E2F49F7226481CA10014AAB0 /* NetworkRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequester.swift; sourceTree = "<group>"; };
+		E2F49F7526481D2C0014AAB0 /* Just.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Just.swift; sourceTree = "<group>"; };
+		E2F49F7726481F220014AAB0 /* MovieListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewModel.swift; sourceTree = "<group>"; };
+		E2F49F7A264822BC0014AAB0 /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +70,8 @@
 		E2AAA7022646C5C5000CD938 /* TrCellProject */ = {
 			isa = PBXGroup;
 			children = (
+				E2F49F79264822A00014AAB0 /* CustomCells */,
+				E2F49F7126481C920014AAB0 /* Helpers */,
 				E2F49F6C26480F180014AAB0 /* ViewModels */,
 				E2F49F6B26480F100014AAB0 /* Controllers */,
 				E2F49F6A26480F090014AAB0 /* Models */,
@@ -96,8 +106,34 @@
 		E2F49F6C26480F180014AAB0 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				E2F49F7726481F220014AAB0 /* MovieListViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		E2F49F7126481C920014AAB0 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E2F49F7226481CA10014AAB0 /* NetworkRequester.swift */,
+				E2F49F7426481D2C0014AAB0 /* Just */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		E2F49F7426481D2C0014AAB0 /* Just */ = {
+			isa = PBXGroup;
+			children = (
+				E2F49F7526481D2C0014AAB0 /* Just.swift */,
+			);
+			path = Just;
+			sourceTree = "<group>";
+		};
+		E2F49F79264822A00014AAB0 /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				E2F49F7A264822BC0014AAB0 /* MovieCollectionViewCell.swift */,
+			);
+			path = CustomCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,9 +209,13 @@
 				E2AAA7082646C5C5000CD938 /* ViewController.swift in Sources */,
 				E2AAA7042646C5C5000CD938 /* AppDelegate.swift in Sources */,
 				E2F49F70264819680014AAB0 /* Movie.swift in Sources */,
+				E2F49F7626481D2C0014AAB0 /* Just.swift in Sources */,
 				E2F49F6E26480F2F0014AAB0 /* DetailViewController.swift in Sources */,
 				E2AAA7062646C5C5000CD938 /* SceneDelegate.swift in Sources */,
 				E2AAA70E2646C5C5000CD938 /* TrCellProject.xcdatamodeld in Sources */,
+				E2F49F7B264822BC0014AAB0 /* MovieCollectionViewCell.swift in Sources */,
+				E2F49F7326481CA10014AAB0 /* NetworkRequester.swift in Sources */,
+				E2F49F7826481F220014AAB0 /* MovieListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
