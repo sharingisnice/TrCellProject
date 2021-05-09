@@ -82,7 +82,7 @@ extension ViewController: MovieListViewModelDelegate {
 }
 
 
-extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         if collectionView == popularCollection {
@@ -153,8 +153,8 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
         performSegue(withIdentifier: "detailSegue", sender: nil)
     }
     
-    func scrollViewDidScrollToTop(_ scrollView: UIScrollView) {
-        print("did scroll to top: \(scrollView)")
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 120, height: 200)
     }
     
 }
