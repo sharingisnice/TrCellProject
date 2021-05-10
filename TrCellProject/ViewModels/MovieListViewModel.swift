@@ -8,9 +8,9 @@
 import Foundation
 
 protocol MovieListViewModelDelegate {
-    func updatePopularMovies(movies: [Movie])
-    func updateTopRatedMovies(movies: [Movie])
-    func updateOnTheaterMovies(movies: [Movie])
+    func updatePopularMovies()
+    func updateTopRatedMovies()
+    func updateOnTheaterMovies()
 
 }
 
@@ -33,7 +33,7 @@ class MovieListViewModel {
         requester.getMovies(movieType: .popular, page: popularPageCount) { movieList in
             let newItems = try! movieList.get()
             self.popularMovies.append(contentsOf: newItems)
-            self.delegate?.updatePopularMovies(movies: self.popularMovies)
+            self.delegate?.updatePopularMovies()
         }
         
     }
@@ -43,7 +43,7 @@ class MovieListViewModel {
         requester.getMovies(movieType: .topRated, page: topRatedPageCount) { movieList in
             let newItems = try! movieList.get()
             self.topRatedMovies.append(contentsOf: newItems)
-            self.delegate?.updateTopRatedMovies(movies: self.topRatedMovies)
+            self.delegate?.updateTopRatedMovies()
         }
     }
     
@@ -52,7 +52,7 @@ class MovieListViewModel {
         requester.getMovies(movieType: .onTheaters, page: onTheaterPageCount) { movieList in
             let newItems = try! movieList.get()
             self.onTheaterMovies.append(contentsOf: newItems)
-            self.delegate?.updateOnTheaterMovies(movies: self.onTheaterMovies)
+            self.delegate?.updateOnTheaterMovies()
         }
     }
         

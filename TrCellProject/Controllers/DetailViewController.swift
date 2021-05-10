@@ -24,7 +24,8 @@ class DetailViewController: UIViewController {
         setupUI()
     }
     
-    
+    //MARK: UI Setup is the only setup we need for this view since we already have the data from the previous MovieListViewController
+    //I haven't used a view model for this scene since we only need 1 object for this view and that is the Movie object, so we set its data from segue
     func setupUI() {
         if let movie = movie {
             let imageUrl = "https://image.tmdb.org/t/p/w500\(movie.imageURL ?? "")"

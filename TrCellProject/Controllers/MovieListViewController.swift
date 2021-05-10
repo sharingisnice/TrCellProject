@@ -8,7 +8,7 @@
 import UIKit
 import SDWebImage
 
-class ViewController: UIViewController {
+class MovieListViewController: UIViewController {
     
     @IBOutlet weak var popularCollection: UICollectionView!
     @IBOutlet weak var topRatedCollection: UICollectionView!
@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     }
     
     
+    //MARK: Setting up UI Elements
     func setupUI() {
         setupNavigationImage()
         
@@ -48,6 +49,7 @@ class ViewController: UIViewController {
     }
     
     
+    //MARK: Segue preparation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "detailSegue" {
             let destination = segue.destination as! DetailViewController
@@ -58,20 +60,21 @@ class ViewController: UIViewController {
     
 }
 
-extension ViewController: MovieListViewModelDelegate {
-    func updateTopRatedMovies(movies: [Movie]) {
+//MARK: Our view model delegate methods to remind ui to refresh itself
+extension MovieListViewController: MovieListViewModelDelegate {
+    func updateTopRatedMovies() {
         DispatchQueue.main.async {
             self.topRatedCollection.reloadData()
         }
     }
     
-    func updateOnTheaterMovies(movies: [Movie]) {
+    func updateOnTheaterMovies() {
         DispatchQueue.main.async {
             self.onTheaterCollection.reloadData()
         }
     }
     
-    func updatePopularMovies(movies: [Movie]) {
+    func updatePopularMovies() {
         DispatchQueue.main.async {
             self.popularCollection.reloadData()
         }
@@ -80,8 +83,8 @@ extension ViewController: MovieListViewModelDelegate {
     
 }
 
-
-extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+//MARK: CollectionView Delegate methods seperated for a cleaner ViewController
+extension MovieListViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         if collectionView == popularCollection {
@@ -106,6 +109,7 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate, 
             movieData = viewModel.popularMovies[indexPath.row]
             cell = popularCollection.dequeueReusableCell(withReuseIdentifier: "MovieCollectionViewCell", for: indexPath) as! MovieCollectionViewCell
             
+            //We fetch new data from the TMDB whenever user scrolls to the end of the line, so we can create the feeling of infinite scrolling
             if indexPath.row == (viewModel.popularMovies.count - 1) {
                 viewModel.getPopulerMovies()
             }
@@ -134,7 +138,7 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate, 
         return cell
     }
     
-    
+    //We segue to DetailView when user selects an item
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == popularCollection {
             viewModel.selectedMovie = viewModel.popularMovies[indexPath.row]

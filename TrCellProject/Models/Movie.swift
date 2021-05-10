@@ -16,6 +16,7 @@ struct Movie: Codable {
     let imageURL: String?
     let id: Int?
     
+    //Here we fit our model to match with the TMDB data style
     enum CodingKeys: String, CodingKey {
         case name = "title"
         case score = "vote_average"

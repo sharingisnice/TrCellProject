@@ -10,7 +10,7 @@
 		56B1A51045A1CFEEB6973417 /* Pods_TrCellProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8310EFB91B6F057882577229 /* Pods_TrCellProject.framework */; };
 		E2AAA7042646C5C5000CD938 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AAA7032646C5C5000CD938 /* AppDelegate.swift */; };
 		E2AAA7062646C5C5000CD938 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AAA7052646C5C5000CD938 /* SceneDelegate.swift */; };
-		E2AAA7082646C5C5000CD938 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AAA7072646C5C5000CD938 /* ViewController.swift */; };
+		E2AAA7082646C5C5000CD938 /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AAA7072646C5C5000CD938 /* MovieListViewController.swift */; };
 		E2AAA70B2646C5C5000CD938 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2AAA7092646C5C5000CD938 /* Main.storyboard */; };
 		E2AAA70E2646C5C5000CD938 /* TrCellProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E2AAA70C2646C5C5000CD938 /* TrCellProject.xcdatamodeld */; };
 		E2AAA7102646C5C6000CD938 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2AAA70F2646C5C6000CD938 /* Assets.xcassets */; };
@@ -31,7 +31,7 @@
 		E2AAA7002646C5C5000CD938 /* TrCellProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrCellProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2AAA7032646C5C5000CD938 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2AAA7052646C5C5000CD938 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E2AAA7072646C5C5000CD938 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E2AAA7072646C5C5000CD938 /* MovieListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewController.swift; sourceTree = "<group>"; };
 		E2AAA70A2646C5C5000CD938 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E2AAA70D2646C5C5000CD938 /* TrCellProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TrCellProject.xcdatamodel; sourceTree = "<group>"; };
 		E2AAA70F2646C5C6000CD938 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -125,7 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				E2F49F6D26480F2F0014AAB0 /* DetailViewController.swift */,
-				E2AAA7072646C5C5000CD938 /* ViewController.swift */,
+				E2AAA7072646C5C5000CD938 /* MovieListViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -277,7 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2AAA7082646C5C5000CD938 /* ViewController.swift in Sources */,
+				E2AAA7082646C5C5000CD938 /* MovieListViewController.swift in Sources */,
 				E2AAA7042646C5C5000CD938 /* AppDelegate.swift in Sources */,
 				E2F49F70264819680014AAB0 /* Movie.swift in Sources */,
 				E2F49F7626481D2C0014AAB0 /* Just.swift in Sources */,

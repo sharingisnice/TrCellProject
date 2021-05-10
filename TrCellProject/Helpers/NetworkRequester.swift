@@ -26,7 +26,7 @@ class NetworkRequester {
         return "&api_key=\(Bundle.main.object(forInfoDictionaryKey: "MovieDB_ApiKey") as? String ?? "")"
     }
     
-   
+    //Combined fetch requests to one function since the only thing changing is the movie type query
     func getMovies(movieType: MovieTypeURLString, page: Int, completion: @escaping (Result<[Movie],NetworkError>) -> () ) {
         let requestURL = "\(baseURL)\(movieType.rawValue)&page=\(page)\(NetworkRequester.requestToken!)"
         
