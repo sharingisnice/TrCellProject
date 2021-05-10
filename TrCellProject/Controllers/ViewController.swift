@@ -32,8 +32,7 @@ class ViewController: UIViewController {
         topRatedCollection.delegate = self
         onTheaterCollection.dataSource = self
         onTheaterCollection.delegate = self
-        
-        
+                
         viewModel.delegate = self
         viewModel.getPopulerMovies()
         viewModel.getTopRatedMovies()
@@ -129,11 +128,8 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate, 
             }
         }
         
-        cell.movie = movieData
-        
         let imageUrl = "https://image.tmdb.org/t/p/w500\(movieData?.imageURL ?? "")"
         cell.movieImage.sd_setImage(with: URL(string: imageUrl))
-        
         
         return cell
     }
@@ -154,7 +150,7 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate, 
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 120, height: 200)
+        return CGSize(width: 120, height: 180)
     }
     
 }
